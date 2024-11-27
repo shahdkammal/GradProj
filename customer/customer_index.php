@@ -50,7 +50,7 @@ include 'includes/navbar.php';
                         <div class="col mb-4">
                             <div class="col">
                                  <div class="card card-deck">
-                                 <img src="../img/' . $category_id . '.jpg" class="card-img-top" style="width:349px; height:200px; object-fit:cover;" alt="..."> 
+                                 <img src="../img/' . $category_id . '.jpg" class="card-img-top" style="height:200px; object-fit:cover;" alt="..."> 
                                  <div class="card-body text-center">
                                         <h5 class="card-title">' . $category_name . '</h5>
                                     </div>

@@ -1,6 +1,6 @@
 <?php
+// define('MYSITE', true);
 include '../db/dbconnect.php';
-// session_start();
 include 'assets/include/admin_header.php';
 ?>
 

@@ -93,7 +93,7 @@ include 'includes/navbar.php';
                                     <td><?php echo $value['service_title']; ?></td>
                                     <td><?php echo $value['sp_name']; ?></td>
                                     <td>
-                                        <small>&#8377;</small><?php echo $value['price']; ?>
+                                        <?php echo $value['price']; ?>
                                         <input type="hidden" class="iprice" value="<?php echo $value['price']; ?>">
                                     </td>
                                     <!-- quantity -->
@@ -122,9 +122,7 @@ include 'includes/navbar.php';
                     <div class="border bg-light rounded p-4">
                         <h4>Grand Total:</h4>
                         <div class="text-right">
-                            <h6 style="display:inline-block;">&#8377;</h6>
                             <h5 style="display:inline-block;" id="gtotal"></h5>
-                            <h5 style="display:inline-block;" id="">/-</h5>
                         </div>
 
                         <?php
