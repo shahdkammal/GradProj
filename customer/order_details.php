@@ -53,8 +53,8 @@ include 'includes/navbar.php';
                                     <th scope="col">Phone(SP)</th>
                                     <th scope="col">Status</th>
                                     <th scope="col">Qty.</th>
-                                    <th scope="col">Price(&#8377;)</th>
-                                    <th scope="col">Total(&#8377;)</th>
+                                    <th scope="col">Price</th>
+                                    <th scope="col">Total</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -124,7 +124,7 @@ include 'includes/navbar.php';
                                     <h3>TOTAL</h3>
                                 </th>
                                 <td>
-                                    <h3>&#8377; <?php echo $total ?></h3>
+                                    <h3><?php echo $total ?></h3>
                                 </td>
                             </tr>
                             <!-- delivery address -->

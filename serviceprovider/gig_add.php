@@ -62,7 +62,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <!-- <h6>Hoverable table</h6> -->
                 <!--Vertical forms-->
                 <div class="col-sm-12 ">
-                    <h6 class="mb-2 pt-3 font-weight-bold">Make Service gig</h6>
+                    <h6 class="mb-2 pt-3 font-weight-bold">Make Service</h6>
                     <div class="mt-4 mb-3 p-3 button-container bg-white border shadow-sm ">
 
                         <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST">
@@ -71,7 +71,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 <label for="categoryname" class="control-label col-sm-3">Service title:</label>
                                 <div class="col-sm-9">
                                     <input type="text" class="form-control" id="servicetitle" name="servicetitle" placeholder="ex.kitchen cleaning" />
-                                    <small id="" class="form-text text-muted">Give suitable service title according your work.</small>
+                                    <small id="" class="form-text text-muted">Give suitable service title according to your work.</small>
                                 </div>
                             </div>
                         
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             <div class="form-group row">
                                 <label for="categoryname" class="control-label col-sm-3">Price:</label>
                                 <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="price" name="price" placeholder="₹500" />
+                                    <input type="text" class="form-control" id="price" name="price" placeholder="500" />
                                     <small id="" class="form-text text-muted">Please Charge service as a market price.</small>
                                 </div>
                             </div>

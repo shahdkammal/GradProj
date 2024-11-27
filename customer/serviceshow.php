@@ -155,7 +155,7 @@ include 'includes/navbar.php';
                                                         ?></h5>
                                     <h6>Service provider: <?php echo $sp_name; ?></h6>
                                     <h6 class="badge badge-success">4.4 <i class="fa-solid fa-star"></i></h6>
-                                    <h6>Starts at <small>&#8377;</small><?php echo $price ?>/-</h6>
+                                    <h6>Starts at <?php echo $price ?></h6>
                                     <hr style="margin-bottom: 5px;">
                                     <p><?php echo $description ?></p>
                                     <!-- <a href="" data-toggle="modal" data-target="#exampleModal"><b>View details</b> </a> -->

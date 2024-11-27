@@ -113,21 +113,11 @@ if (!isset($_SESSION['sp_loggedin']) || $_SESSION['sp_loggedin'] != true) {
 
                     <!--Search box and avatar-->
                     <div class="col-sm-8 col-4 text-right flex-header-menu justify-content-end">
-                        <!-- <a href="logout.php" class="btn btn-sm btn-dark btn-round mr-3">Logout</a> -->
-                        <div class="search-rounded mr-3">
-                            <input type="text" class="form-control search-box" placeholder="Enter keywords.." />
-                        </div>
                         <div class="mr-4">
                             <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="assets/img/default-avatar.jpg" alt="Adam" class="rounded-circle" width="40px" height="40px">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right mt-13" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="sp_index.php"><i class="fa fa-user pr-2"></i> Profile</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="gig_view.php"><i class="fa fa-th-list pr-2"></i> Tasks</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="order_view.php"><i class="fa fa-book pr-2"></i> Projects</a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php"><i class="fa fa-power-off pr-2"></i> Logout</a>
                             </div>
                         </div>
@@ -177,12 +167,12 @@ if (!isset($_SESSION['sp_loggedin']) || $_SESSION['sp_loggedin'] != true) {
                             </li>
                             <li class="parent">
                                 <a href="gig_add.php" class=""><i class="fa fa-puzzle-piece mr-3"></i>
-                                    <span class="none">Make service gig</span>
+                                    <span class="none">Make service</span>
                                 </a>
                             </li>
                             <li class="parent">
                                 <a href="gig_view.php" class=""><i class="fa fa-cogs mr-3"></i>
-                                    <span class="none">View your service gig</span>
+                                    <span class="none">View your services</span>
                                 </a>
                             </li>
                             <li class="parent">
@@ -190,26 +180,6 @@ if (!isset($_SESSION['sp_loggedin']) || $_SESSION['sp_loggedin'] != true) {
                                     <span class="none">Orders </span>
                                 </a>
                             </li>
-                            <!-- <li class="parent">
-                                <a href="" class=""><i class="fa fa-user mr-3"></i>
-                                    <span class="none">Review & rating </span>
-                                </a>
-                            </li> -->
-
-                            <!-- <li class="parent">
-                                <a href="#" onclick="toggle_menu(''); return false" class=""><i class="fa fa-pencil-square mr-3"></i>
-                                    <span class="none">Create Service <i class="fa fa-angle-down pull-right align-bottom"></i></span>
-                                </a>
-                                <ul class="children" id="tables">
-                                    <li class="child"><a href="category_view.php" class="ml-4"><i class="fa fa-angle-right mr-2"></i> View Category Details</a></li>
-                                    <li class="child"><a href="category_view_copy.php" class="ml-4"><i class="fa fa-angle-right mr-2"></i> View Copy Category Details</a></li>
-                                    <li class="child"><a href="category_update.php" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Update Category Details</a></li>
-                                    <li class="child"><a href="jsgrid-table.html" class="ml-4"><i class="fa fa-angle-right mr-2"></i> JSGrid Tables</a></li>
-                                </ul>
-                            </li> -->
-
-
-
                         </ul>
                     </div>
                     <!--Sidebar Naigation Menu-->

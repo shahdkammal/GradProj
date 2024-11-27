@@ -80,7 +80,7 @@ include 'includes/navbar.php';
                         $service_name = $row['service_name'];
                         // <a href="serviceshow.php?service_id=' . $service_id . '&service_name=' . $service_name . '"><button type="button" class="btn btn-outline-c1-1">' . $service_name . '</button></a>
             ?>
-                        <a href="serviceshow.php?serviceid=<?php echo $service_id ?>"><button type="button" class="btn btn-outline-c1-1"><?php echo $service_name ?></button></a>
+                        <button type="button" class="btn btn-outline-c1-1"><?php echo $service_name ?></button>
             <?php
                     }
                 }
@@ -151,7 +151,7 @@ include 'includes/navbar.php';
                                                         ?></h5>
                                     <h6>Service provider: <?php echo $sp_name; ?></h6>
                                     <h6 class="badge badge-success">4.4 <i class="fa-solid fa-star"></i></h6>
-                                    <h6>Starts at <small>&#8377;</small><?php echo $price ?>/-</h6>
+                                    <h6>Starts at <?php echo $price ?></h6>
                                     <hr style="margin-bottom: 5px;">
                                     <p><?php echo $description ?></p>
                                     <!-- <a href="" data-toggle="modal" data-target="#exampleModal"><b>View details</b> </a> -->
@@ -199,7 +199,7 @@ include 'includes/navbar.php';
                                 <div class=" ml-5 text-center" style="width:10rem;">
                                     <img src="img/<?php echo $category_id ?>.jpg" style="width:100px; height:100px;object-fit:cover; border-radius:10px" class="card-img-top" alt="...">
                                     <div class="card-body text-center">
-                                        <button type="submit" name="add_to_cart" class="card-link btn btn-c1-1" style="border-radius:10px;">Add to Cart</button>
+                                        <button type="submit" name="add_to_cart" class="card-link btn btn-c1-1" style="border-radius:10px;">Place Service</button>
                                         <!-- category id pn moklvi pdi because jo category id bahar thi set thy ne nai aave to error batavse dynamic page che atle. -->
                                         <input type="hidden" name="category_id" value="<?php echo $category_id ?>">
                                         <input type="hidden" name="service_id" value="<?php echo $service_id ?>">

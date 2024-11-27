@@ -173,7 +173,7 @@ include 'assets/include/admin_header.php';
                             }
 
                             ?>
-                            <h3 class="mt-0 mb-0"><strong><?php echo $total ?>/-</strong></h3>
+                            <h3 class="mt-0 mb-0"><strong><?php echo $total ?></strong></h3>
                             <p><small class="bc-description text-white">Total Revenue</small></p>
                         </div>
                     </div>

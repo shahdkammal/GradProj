@@ -113,21 +113,12 @@ if (!isset($_SESSION['admin_loggedin']) || $_SESSION['admin_loggedin'] != true) 
 
 
                     <!--Search box and avatar-->
-                    <div class="col-sm-8 col-4 text-right flex-header-menu justify-content-end">
-                        <div class="search-rounded mr-3">
-                            <input type="text" class="form-control search-box" placeholder="Enter keywords.." />
-                        </div>
+                    <div class="col-sm-8 col-4 text-right flex-header-menu justify-content-end">                  
                         <div class="mr-4">
                             <a class="" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <img src="assets/img/user.png " alt="Adam" class="rounded-circle" width="40px" height="40px">
                             </a>
                             <div class="dropdown-menu dropdown-menu-right mt-13" aria-labelledby="dropdownMenuLink">
-                                <a class="dropdown-item" href="category_view.php"><i class="fa fa-square pr-2"></i> Category</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="service_view.php"><i class="fa fa-th-list pr-2"></i> Service</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="_generate_report.php"><i class="fa fa-book pr-2"></i> Report</a>
-                                <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="logout.php"><i class="fa fa-power-off pr-2"></i> Logout</a>
                             </div>
                         </div>
@@ -207,29 +198,8 @@ if (!isset($_SESSION['admin_loggedin']) || $_SESSION['admin_loggedin'] != true) 
                                     <span class="none">Customer <i class="fa fa-angle-down pull-right align-bottom"></i></span>
                                 </a>
                                 <ul class="children" id="customer">
-                                    <li class="child"><a href="customer_view.php" class="ml-4"><i class="fa fa-angle-right mr-2"></i> View Customer</a></li>
-                                    <!-- <li class="child"><a href="sp_update.php" class="ml-4"><i class="fa fa-angle-right mr-2"></i> Edit Service Provider Details</a></li> -->
+                                    <li class="child"><a href="customer_view.php" class="ml-4"><i class="fa fa-angle-right mr-2"></i> View Customer</a></li>                                 
                                 </ul>
-                            </li>
-
-
-
-                            <!-- Orders -->
-                            <!-- <li class="parent">
-                                <a href="#" onclick="toggle_menu('order'); return false" class=""><i class="fa  fa-cubes mr-3"></i>
-                                    <span class="none">Order <i class="fa fa-angle-down pull-right align-bottom"></i></span>
-                                </a>
-                                <ul class="children" id="order">
-                                    <li class="child"><a href="view_order.php" class="ml-4"><i class="fa fa-angle-right mr-2"></i> View Order</a></li>
-                                </ul>
-                            </li> -->
-
-
-                            <!-- orders -->
-                            <li class="parent">
-                                <a href="_generate_report.php" class=""><i class="fa fa-book mr-3"></i>
-                                    <span class="none">Generate Report </span>
-                                </a>
                             </li>
 
 
