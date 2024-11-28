@@ -65,7 +65,6 @@ include 'assets/include/admin_header.php';
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>City</th>
-                                <th>Pincode</th>
                                 <th>Status</th>
                                 <th>Operation</th>
                             </tr>
@@ -86,7 +85,6 @@ include 'assets/include/admin_header.php';
                                     $email = $row['email'];
                                     $phone = $row['phone'];
                                     $city = $row['city_name'];
-                                    $pincode = $row['pincode'];
                                     $status = $row['status'];
 
                             ?>
@@ -96,7 +94,6 @@ include 'assets/include/admin_header.php';
                                         <td><?php echo $email ?></td>
                                         <td><?php echo $phone ?></td>
                                         <td><?php echo $city ?></td>
-                                        <td><?php echo $pincode ?></td>
                                         <td>
                                             <?php
                                             if ($status == 'deactive') {
@@ -141,7 +138,6 @@ include 'assets/include/admin_header.php';
                                 <th>Email</th>
                                 <th>Phone</th>
                                 <th>City</th>
-                                <th>Pincode</th>
                                 <th>Status</th>
                             </tr>
                         </tfoot>

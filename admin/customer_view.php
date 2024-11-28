@@ -78,7 +78,7 @@ include 'assets/include/admin_header.php';
                                 <th>Phone</th>
                                 <th>City</th>
                                 <th>Address</th>
-                                <th>Pincode</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -100,7 +100,7 @@ include 'assets/include/admin_header.php';
                                     $phone = $row['phone'];
                                     $city = $row['city_name'];
                                     $address = $row['address'];
-                                    $pincode = $row['pincode'];
+                                    
 
                             ?>
                                     <tr>
@@ -110,7 +110,7 @@ include 'assets/include/admin_header.php';
                                         <td><?php echo $phone ?></td>
                                         <td><?php echo $city ?></td>
                                         <td><?php echo $address ?></td>
-                                        <td><?php echo $pincode ?></td>
+                                        
                                         <!-- <td><a href=""> <button type="button" class="btn btn-danger btn-sm"><i class="fa fa-close"></i></button></a></td> -->
                                     </tr>
 
@@ -129,7 +129,7 @@ include 'assets/include/admin_header.php';
                                 <th>Phone</th>
                                 <th>City</th>
                                 <th>Address</th>
-                                <th>Pincode</th>
+                                
                             </tr>
                         </tfoot>
                     </table>
