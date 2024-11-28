@@ -114,7 +114,9 @@ if ($user_data) { $login_id = $user_data['login_id'];
     <div class="container mt-5"> 
         <div class="profile-header">
              <h2>User Profile</h2>
-              <p><strong>First Nameee:</strong>
+             <p><strong>User Name:</strong>
+               <?php echo htmlspecialchars($logged_in_username); ?>
+              <p><strong>First Name:</strong>
                <?php echo htmlspecialchars($first_name); ?>
             </p> <p><strong>Last Name:</strong> 
             <?php echo htmlspecialchars($last_name); 
