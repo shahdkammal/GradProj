@@ -52,7 +52,7 @@ include 'assets/include/admin_header.php';
                                 <?php
                                 }
                                 ?>
-                                <p><small class="text-muted bc-description">Total Service provider</small></p>
+                                <p><small class="text-muted bc-description">Total Service providers</small></p>
                             </div>
                         </div>
                     </a>
@@ -78,7 +78,7 @@ include 'assets/include/admin_header.php';
                             <?php
                             }
                             ?>
-                            <p><small class="text-muted bc-description">Total Customer</small></p>
+                            <p><small class="text-muted bc-description">Total Customers</small></p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +124,7 @@ include 'assets/include/admin_header.php';
                             }
                             ?>
                             <h3 class="mt-0 mb-0"><strong><?php echo $service_gig ?></strong></h3>
-                            <p><small class="bc-description text-muted">Total Service GIG</small></p>
+                            <p><small class="bc-description text-muted">Total Services</small></p>
                         </div>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ include 'assets/include/admin_header.php';
 
                             ?>
                             <h3 class="mt-0 mb-0"><strong><?php echo $repeat_customer ?></strong></h3>
-                            <p><small class="bc-description text-muted">Repeat Customer</small></p>
+                            <p><small class="bc-description text-muted">Repeated Customers</small></p>
                         </div>
                     </div>
                 </div>
