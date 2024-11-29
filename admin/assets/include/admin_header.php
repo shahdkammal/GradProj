@@ -157,6 +157,13 @@ if (!isset($_SESSION['admin_loggedin']) || $_SESSION['admin_loggedin'] != true) 
                                 </a>
                             </li>
 
+                            <!-- dashboard -->
+                            <li class="parent">
+                                <a href="index.html" class=""><i class="fa fa-user mr-3"></i>
+                                    <span class="none">Insights</span>
+                                </a>
+                            </li>
+
                             <!-- Category -->
                             <li class="parent">
                                 <a href="#" onclick="toggle_menu('category'); return false" class=""><i class="fa  fa-square mr-3"></i>
