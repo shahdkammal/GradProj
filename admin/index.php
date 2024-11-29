@@ -32,7 +32,6 @@ include 'assets/include/admin_header.php';
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                 <div class="bg-white border shadow">
-                    <a href="sp_view.php">
                         <div class="media p-4">
                             <div class="align-self-center mr-3 rounded-circle notify-icon bg-theme">
                                 <i class="fa fa-male"></i>
@@ -52,10 +51,9 @@ include 'assets/include/admin_header.php';
                                 <?php
                                 }
                                 ?>
-                                <p><small class="text-muted bc-description">Total Service provider</small></p>
+                                <p><small class="text-muted bc-description">Total Service providers</small></p>
                             </div>
                         </div>
-                    </a>
                 </div>
             </div>
 
@@ -78,7 +76,7 @@ include 'assets/include/admin_header.php';
                             <?php
                             }
                             ?>
-                            <p><small class="text-muted bc-description">Total Customer</small></p>
+                            <p><small class="text-muted bc-description">Total Customers</small></p>
                         </div>
                     </div>
                 </div>
@@ -124,7 +122,7 @@ include 'assets/include/admin_header.php';
                             }
                             ?>
                             <h3 class="mt-0 mb-0"><strong><?php echo $service_gig ?></strong></h3>
-                            <p><small class="bc-description text-muted">Total Service GIG</small></p>
+                            <p><small class="bc-description text-muted">Total Services</small></p>
                         </div>
                     </div>
                 </div>
@@ -152,7 +150,7 @@ include 'assets/include/admin_header.php';
 
                             ?>
                             <h3 class="mt-0 mb-0"><strong><?php echo $repeat_customer ?></strong></h3>
-                            <p><small class="bc-description text-muted">Repeat Customer</small></p>
+                            <p><small class="bc-description text-muted">Repeated Customers</small></p>
                         </div>
                     </div>
                 </div>
