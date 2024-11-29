@@ -32,7 +32,6 @@ include 'assets/include/admin_header.php';
 
             <div class="col-lg-4 col-md-4 col-sm-6 col-12 mb-3">
                 <div class="bg-white border shadow">
-                    <a href="sp_view.php">
                         <div class="media p-4">
                             <div class="align-self-center mr-3 rounded-circle notify-icon bg-theme">
                                 <i class="fa fa-male"></i>
@@ -55,7 +54,6 @@ include 'assets/include/admin_header.php';
                                 <p><small class="text-muted bc-description">Total Service providers</small></p>
                             </div>
                         </div>
-                    </a>
                 </div>
             </div>
 
