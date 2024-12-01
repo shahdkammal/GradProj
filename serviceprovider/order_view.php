@@ -54,7 +54,6 @@ include 'assets/include/sp_header.php';
                                     <th>Customer</th>
                                     <th>Phone</th>
                                     <th>Address</th>
-                                    <th>Pincode</th>
                                     <th>Pay mode</th>
                                     <th>Order date</th>
                                     <th>Due date</th>
@@ -73,7 +72,6 @@ include 'assets/include/sp_header.php';
                                         $full_name = $row1['full_name'];
                                         $phone = $row1['phone'];
                                         $address = $row1['address'];
-                                        $pincode = $row1['pincode'];
                                         $pay_mode = $row1['pay_mode'];
                                         $total = $row1['total'];
                                         $fake_order_date = $row1['order_date'];
@@ -90,7 +88,6 @@ include 'assets/include/sp_header.php';
                                             <td class="align-middle"><?php echo $full_name ?></td>
                                             <td class="align-middle"><?php echo $phone ?></td>
                                             <td class="align-middle"><?php echo $address ?></td>
-                                            <td class="align-middle"><?php echo $pincode ?></td>
                                             <td class="align-middle"><?php echo $pay_mode ?></td>
                                             <td class="align-middle"><?php echo $order_date ?></td>
                                             <td class="align-middle"><?php echo $due_date ?></td>

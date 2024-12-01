@@ -246,9 +246,9 @@ tr:hover .cut { opacity: 1; }
               <td><a class="cut"></a><span contenteditable>' . $sno . '</span></td>
               <td><a class="cut"></a><span contenteditable>' . $service_title . '</span></td>
               <td><span contenteditable>'. $sp_name .'</span></td>
-              <td><span data-prefix>&#8377;</span><span contenteditable>'. $price.'</span></td>
+              <td><span data-prefix></span><span contenteditable>'. $price.'</span></td>
               <td><span contenteditable>'.$qty.'</span></td>
-              <td><span data-prefix>&#8377;</span><span>'. $qty*$price . '</span></td>
+              <td><span data-prefix></span><span>'. $qty*$price . '</span></td>
             </tr>
            ';
           } //while row2 end
@@ -260,15 +260,17 @@ tr:hover .cut { opacity: 1; }
         <table class="balance">
           <tr>
             <th><span contenteditable>Total</span></th>
-            <td><span data-prefix>&#8377;</span><span>'. $total .'</span></td>
+            <td><span data-prefix></span><span>'. $total .'</span></td>
           </tr>
+
           <tr>
-            <th><span contenteditable>Payment mode</span></th>
-            <td><span data-prefix></span><span>'. $pay_mode.  ' </span></td>
+            <th><span contenteditable>Payment Mode</span></th>
+            <td><span data-prefix></span><span>'. $pay_mode. '</span></td>
           </tr>
+          
           <tr>
             <th><span contenteditable>Amount Paid</span></th>
-            <td><span data-prefix>&#8377;</span><span contenteditable>'.$total.'</span></td>
+            <td><span data-prefix></span><span contenteditable>'.$total.'</span></td>
           </tr>
         </table>
       </article>
