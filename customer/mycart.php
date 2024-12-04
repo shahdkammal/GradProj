@@ -142,10 +142,7 @@ include 'includes/navbar.php';
                                     <textarea name="address" id="address" cols="25" rows="3" required></textarea>
                                 </div>
 
-                                <div class="form-group">
-                                    <label>Pincode</label>
-                                    <input type="text" class="form-control" pattern="\d{6}" name="pincode" id="pincode" required>
-                                </div>
+                                
 
                                 <div class="form-group">
                                     <label>Service Date:-</label>
