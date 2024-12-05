@@ -162,8 +162,10 @@ include 'includes/navbar.php';
                 <br>
                 <br>
         <?php
-            } //while result1 end
+            }
+             //while result1 end
         } //if result1 end
+        
 
         ?>
 

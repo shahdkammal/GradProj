@@ -62,7 +62,7 @@ if (!isset($_SESSION['admin_loggedin']) || $_SESSION['admin_loggedin'] != true) 
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <title>Home Services Admin</title>
+    <title>s Admin</title>
 </head>
 
 

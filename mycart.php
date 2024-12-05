@@ -57,7 +57,7 @@ include 'includes/navbar.php';
                                     <div class="col-sm-12 empty-cart-cls text-center">
                                         <!-- <img src="https://i.imgur.com/dCdflKN.png" width="130" height="130" class="img-fluid mb-4 mr-3"> -->
                                         <img src="img/EMPTY_CART.png" width="130" height="130" class="img-fluid mb-4 mr-3">
-                                        <h3><strong>Your Cart is Empty</strong></h3>
+                                        <h3><strong>Your Service Cart is Empty</strong></h3>
                                         <h5 class="text-secondary">You will find a lot of interesting services on our "Service" page :)</h5>
                                         <a href="index.php" class="btn btn-c1-1 cart-btn-transform m-3" data-abc="true">Place Service Now </a>
 
@@ -146,10 +146,7 @@ include 'includes/navbar.php';
                                     <textarea name="address" id="address" cols="25" rows="3" required></textarea>
                                 </div>
 
-                                <div class="form-group">
-                                    <label>Pincode</label>
-                                    <input type="text" class="form-control" pattern="\d{6}" name="pincode" id="pincode" required>
-                                </div>
+                               
 
 
                                 <div class="form-group">

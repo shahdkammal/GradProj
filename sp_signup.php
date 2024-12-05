@@ -44,10 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $login_id = $login_row['login_id'];
 
                 //fetch city is from city table.
-                $fetch_cityid = "SELECT `city_id` FROM `city` where city_name ='$city_name'";
-                $fetch_city_result = mysqli_query($conn, $fetch_cityid);
-                $city_row = mysqli_fetch_assoc($fetch_city_result);
-                $city_id = $city_row['city_id'];
+                $fetch_cityid = "SELECT `city_id` FROM `city` WHERE `city_name` = '$city_name'"; 
+                $fetch_city_result = mysqli_query($conn, $fetch_cityid); 
+                if (!$fetch_city_result) { die("Error fetching city ID: " . mysqli_error($conn));
+                 } $city_row = mysqli_fetch_assoc($fetch_city_result); 
+                 if (!$city_row) { die("City not found in database."); 
+                } $city_id = $city_row['city_id'];
                 // $sql2 = "INSERT INTO `sp` (`sp_id`, `login_id`, `sp_name`, `email`, `phone`, `city_id`, ) VALUES (NULL, '16', 'deepkorat', 'deepkorat213@gmail.com', '9687480417', '5', )";
                 $sql2 = "INSERT INTO `sp` (`sp_id`, `login_id`, `sp_name`, `email`, `phone`, `city_id`, `status`) VALUES ('', '$login_id', '$sp_name', '$email','$phone','$city_id', 'deactive')";
                 $result2 = mysqli_query($conn, $sql2);
