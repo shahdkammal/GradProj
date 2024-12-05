@@ -16,8 +16,8 @@ include 'assets/include/admin_header.php';
                 $sp_name = $_GET['spname'];
             }
             ?>
-            <h5 class="mb-0"><strong>Service GIG - <?php echo $sp_name ?></strong></h5>
-            <span class="text-secondary">Dashboard <i class="fa fa-angle-right"></i> View Service Gig</span>
+            <h5 class="mb-0"><strong>Service Description - <?php echo $sp_name ?></strong></h5>
+            <span class="text-secondary">Dashboard <i class="fa fa-angle-right"></i> View Service Description</span>
         </div>
         <div class="col-md-auto col-lg-7">
 

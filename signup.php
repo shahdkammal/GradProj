@@ -21,7 +21,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST["phone"];
     $address = $_POST["address"];
     $city_name = $_POST["city"];
-    $pincode = $_POST["pincode"];
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
@@ -34,6 +33,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $showError = "Username is already existing.";
     }
     else { 
+        $existemail = "SELECT * FROM `customer` WHERE `email` = '$email'"; 
+        $existemailresult = mysqli_query($conn, $existemail); 
+        $numemailexist = mysqli_num_rows($existemailresult); 
+        if ($numemailexist > 0) { $showError = "Email is already registered.";
+        }else{
+            
+        }
         if ($password == $cpassword ) {
             $hash = password_hash($password, PASSWORD_DEFAULT);
             // insert into LOGIN TABLE only USERNAME & PASSWORD.
@@ -47,27 +53,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $login_row = mysqli_fetch_assoc($fetch_result);
                 $login_id = $login_row['login_id'];
 
-                //fetch city is from city table.
-                $fetch_cityid = "SELECT `city_id` FROM `city` where city_name ='$city_name'";
-                $fetch_city_result = mysqli_query($conn, $fetch_cityid);
-                $city_row = mysqli_fetch_assoc($fetch_city_result); 
-                $city_id = $city_row['city_id'];
-                $sql2 = "INSERT INTO `customer` (`customer_id`, `login_id`, `first_name`, `last_name`, `email`, `phone`, `address`, `city_id`, `pincode`) VALUES ('', '$login_id', '$first_name', '$last_name','$email','$phone', '$address', '$city_id', '$pincode')";
-                $result2 = mysqli_query($conn, $sql2);
-                if ($result2) {
-                    $showAlert = "Your account is now created.";
-                }
-                } else {
-                    $showError = "Something went wrong!";
-                }
-            
-        } 
-        else {
-            $showError = "Password do no match!";
-        }
-    }
-}               
+                //  Fetch city id from city table
+                     $fetch_cityid = "SELECT `city_id` FROM `city` WHERE `city_name` = '$city_name'";
+                      $fetch_city_result = mysqli_query($conn, $fetch_cityid); 
+                      $city_row = mysqli_fetch_assoc($fetch_city_result);
+                       $city_id = $city_row['city_id'];
+                    //    insert
+                       $sql2 = "INSERT INTO `customer` (`customer_id`, `login_id`, `first_name`, `last_name`, `email`, `phone`, `address`, `city_id`) VALUES ('', '$login_id', '$first_name', '$last_name', '$email', '$phone', '$address', '$city_id')"; 
+                       $result2 = mysqli_query($conn, $sql2); 
+                       if ($result2) { $showAlert = "Your account is now created.";
+                     } else { $showError = "Something went wrong!"; 
+                    } } else { $showError = "Something went wrong!";
+                     } } else { $showError = "Passwords do not match!"; 
+                    } }
 
+                }
 ?>
 
 
@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- container -->
     <div class="container">
         <div class="mx-auto" style="width: 75%; border: 1px solid #1C315E; padding: 3em;">
-            <h4 class="pb-2 text-c1-1">Enter the details for order service </h4>
+            <h4 class="pb-2 text-c1-1">Enter Your Details </h4>
             <div class="bg-c1-1" style="width:370px; height: 3px; margin-top:-10px;"></div>
             <hr class="pt-3">
 
@@ -173,10 +173,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </select>
                         <div class="invalid-feedback">Please choose a city.</div>
                     </div>
-                    <div class="form-group col-md-2 input-group-sm">
-                        <label for="Pincode">Pincode:-</label>
-                        <input type="text" class="form-control" name="pincode" pattern="\d{6}" id="pincode" required>
-                    </div>
+                    
                 </div>
                 <hr class="mt-4 mb-4">
 

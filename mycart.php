@@ -59,7 +59,7 @@ include 'includes/navbar.php';
                                         <img src="img/EMPTY_CART.png" width="130" height="130" class="img-fluid mb-4 mr-3">
                                         <h3><strong>Your Cart is Empty</strong></h3>
                                         <h5 class="text-secondary">You will find a lot of interesting services on our "Service" page :)</h5>
-                                        <a href="index.php" class="btn btn-c1-1 cart-btn-transform m-3" data-abc="true">continue shopping</a>
+                                        <a href="index.php" class="btn btn-c1-1 cart-btn-transform m-3" data-abc="true">Place Service Now </a>
 
                                     </div>
                                 </div>
