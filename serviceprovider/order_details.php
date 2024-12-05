@@ -141,7 +141,7 @@ include 'assets/include/sp_header.php';
                                                                 <div class="dropdown-menu">
                                                                     <center>
                                                                         <button type="submit" name="completed" class="btn btn-success m-2">Completed</button>
-                                                                        <button type="submit" name="uncompleted" class="btn btn-danger m-2">Unompleted</button>
+                                                                        <button type="submit" name="uncompleted" class="btn btn-danger m-2">Uncompleted</button>
 
                                                                         <input type="hidden" name="status" value="<?php echo $status ?>">
                                                                         <input type="hidden" name="sp_id" value="<?php echo $sp_id ?>">
