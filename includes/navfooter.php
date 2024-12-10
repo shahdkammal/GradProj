@@ -25,8 +25,7 @@ if (!defined('MYSITE')) {
                     <!-- Content -->
                     <a class="navbar-brand" href="admin/index.php"> <img src="img/mainlogo.png" style="width:170px;" alt="Logo"> </a>
 
-                    <!-- <h5 class="text-uppercase text-light">Footer Content</h5> -->
-                    <!-- <p class="text-light">Here you can use rows and columns to organize your footer content.</p> -->
+                   
 
                 </div>
                 <!-- Grid column -->
@@ -37,7 +36,7 @@ if (!defined('MYSITE')) {
                 <div class="col-md-3 mb-md-0 mb-3">
 
                     <!-- Links -->
-                    <h5 class="text-uppercase text-light">Links</h5>
+                    
 
                     <ul class="list-unstyled">
 
@@ -62,7 +61,7 @@ if (!defined('MYSITE')) {
                 <div class="col-md-3 mb-md-0 mb-3">
 
                     <!-- Links -->
-                    <h5 class="text-uppercase text-light">Links</h5>
+                    
 
                     <ul class="list-unstyled">
                         <li>

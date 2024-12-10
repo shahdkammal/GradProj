@@ -1,47 +1,34 @@
 <?php
 session_start();
+include '../db/dbconnect.php';
 
-if (isset($_POST['verifyotp'])) {
+if (isset($_POST['verify'])) {
     $entered_otp = $_POST['otp'];
-    
-    if ($entered_otp == $_SESSION['otp']) {
-        $_SESSION['otp_verified'] = true;
-        header("Location: resettpas.php");
+    $new_password = $_POST['new_password'];
+    $stored_otp = $_SESSION['otp'];
+    $phone = $_SESSION['phone'];
+
+    if ($entered_otp == $stored_otp) {
+        // Hash the new password
+        $hashed_password = password_hash($new_password, PASSWORD_DEFAULT);
+
+        // Update the password in the database
+        $update_query = "UPDATE login 
+                         JOIN customer ON login.login_id = customer.login_id 
+                         SET login.password = '$hashed_password' 
+                         WHERE customer.phone = '$phone'";
+        $update_result = mysqli_query($conn, $update_query);
+
+        if ($update_result) {
+            echo '<div class="container">
+                    <div class="alert alert-success" role="alert">Password reset successfully!</div>
+                    <a href="../login.php" class="btn btn-primary back-btn">Back to Login</a>
+                  </div>';
+        } else {
+            echo '<div class="alert alert-danger" role="alert">Failed to reset password. Please try again.</div>';
+        }
     } else {
-        $_SESSION['statusfail'] = "Invalid OTP.";
+        echo '<div class="alert alert-danger" role="alert">Invalid OTP. Please try again.</div>';
     }
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Verify OTP</title>
-    <link rel="stylesheet" href="../serviceprovider/assets/css/bootstrap.min.css">
-</head>
-<body class="login-body">
-    <div class="container-fluid login-wrapper">
-        <div class="login-box">
-            <?php
-            if (isset($_SESSION['status'])) {
-                echo '<div class="alert alert-success" role="alert">' . $_SESSION['status'] . '</div>';
-                unset($_SESSION['status']);
-            } elseif (isset($_SESSION['statusfail'])) {
-                echo '<div class="alert alert-danger" role="alert">' . $_SESSION['statusfail'] . '</div>';
-                unset($_SESSION['statusfail']);
-            }
-            ?>
-            <form action="verify_otp.php" method="post">
-                <div class="form-group">
-                    <label for="otp">Enter OTP</label>
-                    <input type="text" class="form-control" name="otp" placeholder="Enter OTP">
-                </div>
-                <button type="submit" name="verifyotp" class="btn btn-primary">Verify OTP</button>
-            </form>
-        </div>
-    </div>
-</body>
-</html>

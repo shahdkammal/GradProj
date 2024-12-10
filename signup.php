@@ -1,74 +1,53 @@
-<?php
-define('MYSITE', true);
-include 'db/dbconnect.php';
-
-$title = 'Signup';
-$css_directory = 'css/main.min.css';
-$css_directory2 = 'css/main.min.css.map';
-include 'includes/header.php';  
-include 'includes/navbar.php';
-?>
-
-
-<?php
-$showAlert = false;
-$showError = false;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $first_name = $_POST["firstname"];
-    $last_name = $_POST["lastname"];
-    $email = $_POST["email"];
-    $phone = $_POST["phone"];
-    $address = $_POST["address"];
-    $city_name = $_POST["city"];
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $cpassword = $_POST["cpassword"];
-
-    
-    $existsql = "SELECT * FROM `login` where username ='$username' ";
-    $existresult = mysqli_query($conn, $existsql);
-    $numexist = mysqli_num_rows($existresult);
-    if ($numexist > 0) {
-        $showError = "Username is already existing.";
-    }
-    else { 
-        $existemail = "SELECT * FROM `customer` WHERE `email` = '$email'"; 
-        $existemailresult = mysqli_query($conn, $existemail); 
-        $numemailexist = mysqli_num_rows($existemailresult); 
-        if ($numemailexist > 0) { $showError = "Email is already registered.";
-        }else{
-            
-        }
-        if ($password == $cpassword ) {
-            $hash = password_hash($password, PASSWORD_DEFAULT);
-            // insert into LOGIN TABLE only USERNAME & PASSWORD.
-            $sql = "INSERT INTO `login` (`login_id` , `role_id`, `username`,`password`) VALUES ('', '3', '$username', '$hash')";
-            $result = mysqli_query($conn, $sql);
-            
-            if ($result) {
-                //fetch login id from login table.
-                $fetch_loginid = "SELECT `login_id` FROM `login` where username ='$username'";
-                $fetch_result = mysqli_query($conn, $fetch_loginid);
-                $login_row = mysqli_fetch_assoc($fetch_result);
-                $login_id = $login_row['login_id'];
-
-                //  Fetch city id from city table
-                     $fetch_cityid = "SELECT `city_id` FROM `city` WHERE `city_name` = '$city_name'";
-                      $fetch_city_result = mysqli_query($conn, $fetch_cityid); 
-                      $city_row = mysqli_fetch_assoc($fetch_city_result);
-                       $city_id = $city_row['city_id'];
-                    //    insert
-                       $sql2 = "INSERT INTO `customer` (`customer_id`, `login_id`, `first_name`, `last_name`, `email`, `phone`, `address`, `city_id`) VALUES ('', '$login_id', '$first_name', '$last_name', '$email', '$phone', '$address', '$city_id')"; 
-                       $result2 = mysqli_query($conn, $sql2); 
-                       if ($result2) { $showAlert = "Your account is now created.";
-                     } else { $showError = "Something went wrong!"; 
-                    } } else { $showError = "Something went wrong!";
-                     } } else { $showError = "Passwords do not match!"; 
-                    } }
-
-                }
-?>
+<?php define('MYSITE', true);
+ include 'db/dbconnect.php';
+  $title = 'Signup';
+   $css_directory = 'css/main.min.css';
+    $css_directory2 = 'css/main.min.css.map';
+     include 'includes/header.php';
+      include 'includes/navbar.php';
+       ?> <?php $showAlert = false;
+        $showError = false;
+         if ($_SERVER["REQUEST_METHOD"] == "POST") { $first_name = $_POST["firstname"];
+          $last_name = $_POST["lastname"];
+           $email = $_POST["email"]; 
+           $phone = $_POST["phone"]; 
+           $address = $_POST["address"];
+            $city_name = $_POST["city"];
+             $username = $_POST["username"]; 
+             $password = $_POST["password"];
+              $cpassword = $_POST["cpassword"]; 
+              // Check for existing username or email
+               $existsql = "SELECT * FROM `login` WHERE `username` = '$username'"; 
+               $existresult = mysqli_query($conn, $existsql);
+                $numexist = mysqli_num_rows($existresult);
+                 $existemail = "SELECT * FROM `customer` WHERE `email` = '$email'";
+                  $existemailresult = mysqli_query($conn, $existemail);
+                   $numemailexist = mysqli_num_rows($existemailresult); 
+                   if ($numexist > 0) { $showError = "Username is already existing.";
+                    } elseif ($numemailexist > 0) { $showError = "Email is already registered."; 
+                    } elseif ($password == $cpassword) { $hash = password_hash($password, PASSWORD_DEFAULT);
+                     // Insert into LOGIN TABLE only USERNAME & PASSWORD.
+                      $sql = "INSERT INTO `login` (`login_id`, `role_id`, `username`, `password`) VALUES (NULL, '3', '$username', '$hash')";
+                       $result = mysqli_query($conn, $sql); 
+                       if ($result) {
+                         // Fetch login id from login table. 
+                         $fetch_loginid = "SELECT `login_id` FROM `login` WHERE `username` = '$username'";
+                          $fetch_result = mysqli_query($conn, $fetch_loginid);
+                           $login_row = mysqli_fetch_assoc($fetch_result); 
+                           $login_id = $login_row['login_id'];
+                            // Fetch city id from city table
+                             $fetch_cityid = "SELECT `city_id` FROM `city` WHERE `city_name` = '$city_name'";
+                              $fetch_city_result = mysqli_query($conn, $fetch_cityid); 
+                              $city_row = mysqli_fetch_assoc($fetch_city_result); 
+                              $city_id = $city_row['city_id'];
+                               // Insert into CUSTOMER TABLE
+                                $sql2 = "INSERT INTO `customer` (`customer_id`, `login_id`, `first_name`, `last_name`, `email`, `phone`, `address`, `city_id`) VALUES (NULL, '$login_id', '$first_name', '$last_name', '$email', '$phone', '$address', '$city_id')";
+                                 $result2 = mysqli_query($conn, $sql2); 
+                                 if ($result2) { $showAlert = "Your account is now created."; 
+                                 } else { $showError = "Something went wrong!";
+                                  } } else { $showError = "Something went wrong!"; 
+                                  } } else { $showError = "Passwords do not match!"; 
+                                  } } ?>
 
 
 
@@ -250,3 +229,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php
     include 'includes/footer.php';
     ?>
+
+

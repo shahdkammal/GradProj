@@ -54,14 +54,14 @@ session_start();
             <div class="row h-100 justify-content-center align-items-center">
                 <div class="col-md-6 col-sm-6 col-12 login-box-form p-4">
                     <h3 class="mb-2">Forgot Password</h3>
-                    <small class="text-muted bc-description">Enter your username & email and we'll send you a link to get back into your account.</small>
+                    <small class="text-muted bc-description">Enter your username & phone number and we'll send you an OTP to reset your password.</small>
                     <br><br>
                     <form action="send_otp.php" method="post" class="mt-2">
                         <div class="input-group mb-3">
-                            <input type="text" class="form-control mt-0" name="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            <input type="text" class="form-control mt-0" name="username" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required>
                         </div>
                         <div class="input-group mb-3">
-                            <input type="email" name="email" placeholder="Enter your Email" class="form-control mt-0">
+                            <input type="text" name="phone" placeholder="Enter your Phone Number" class="form-control mt-0" required>
                         </div>
                         <div class="form-group">
                             <input type="submit" class="btn btn-theme btn-block p-2 mb-1" name="sendotp" value="SEND OTP">
