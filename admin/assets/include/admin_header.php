@@ -160,7 +160,7 @@ if (!isset($_SESSION['admin_loggedin']) || $_SESSION['admin_loggedin'] != true) 
                             <!-- dashboard -->
                             <li class="parent">
                                 <a href="insight.php" class=""><i class="fa fa-line-chart" aria-hidden="true"></i>
-                                    <span class="none">Insights </span>
+                                    <span class="ml-3"> Insights </span>
                                 </a>
                             </li>
 
