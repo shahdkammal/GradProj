@@ -17,13 +17,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         $full_name = $_POST['full_name'];
                         $phone = $_POST['phone'];
                         $address = $_POST['address'];
-                        $pincode = $_POST['pincode'];
                         $pay_mode = $_POST['pay_mode'];
                         date_default_timezone_set('Asia/Kolkata');
                         $order_date = date('Y-m-d h:i:s');
                         $due_date = $_POST['due_date'];
                         $total = $_POST['total'];
-                        $masterquery = "INSERT INTO `order_master`(`customer_id`, `full_name`, `phone`, `address`, `pincode`, `pay_mode`,`total`, `order_date`, `due_date`) VALUES ($customer_id, '$full_name','$phone','$address','$pincode','$pay_mode','$total','$order_date', '$due_date')";
+                        $masterquery = "INSERT INTO `order_master`(`customer_id`, `full_name`, `phone`, `address`, `pay_mode`,`total`, `order_date`, `due_date`) VALUES ($customer_id, '$full_name','$phone','$address','$pay_mode','$total','$order_date', '$due_date')";
                         $result = mysqli_query($conn, $masterquery);
                         if ($result) {
                                 $order_id = mysqli_insert_id($conn);

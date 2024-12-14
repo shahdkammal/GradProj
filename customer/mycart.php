@@ -159,12 +159,7 @@ include 'includes/navbar.php';
                                         Cash On Delivery
                                     </label>
                                 </div>
-                                <!-- <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="pay_mode" id="exampleRadios2" value="Gpay">
-                                    <label class="form-check-label" for="exampleRadios2">
-                                        GPay
-                                    </label>
-                                </div> -->
+                                
                                 <br>
                                 <button type="submit" class="btn btn-primary btn-block" name="order">Make Order</button>
                                 <input type="hidden" id="total" name="total">
