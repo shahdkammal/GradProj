@@ -103,6 +103,7 @@ if (!defined('MYSITE')) {
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <a href="../sp_signup.php" target=""><button type="button" class="btn btn-outline-light mr-2">Register As a Service Provider</button></a>
+            
             <div class="btn-group mr-3">
                 <a href="order_details.php"><button type="button" class="btn btn-c1-2">
                 <i class="fa fa-th-list pr-2"></i> My Order

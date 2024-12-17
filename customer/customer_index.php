@@ -82,15 +82,7 @@ include 'includes/navbar.php';
 
 
 
-    <!-- <div class="col mb-4">
-        <div class="col">
-            <div class="card card-deck">
-                <div class="card-body text-center">
-                    <h5 class="card-title ">Card title</h5>
-                </div>
-            </div>
-        </div>
-    </div> -->
+
 
 
 

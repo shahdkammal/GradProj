@@ -102,6 +102,7 @@ if (!defined('MYSITE')) {
 
             <a href="login.php" target=""><button type="button" class="btn btn-outline-light mr-2">Login</button></a>
             <a href="signup.php" target=""><button type="button" class="btn btn-outline-light mr-2">Sign Up</button></a>
+            <a href="form.html" target=""><button type="button" class="btn btn-outline-light mr-2">Send Feedback</button></a>
             <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-c1-2 my-2 my-sm-0 mr-3" type="submit">Search</button> -->
 

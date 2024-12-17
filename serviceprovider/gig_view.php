@@ -60,16 +60,7 @@ include 'assets/include/sp_header.php';
                         </thead>
                         <tbody>
                             <?php
-                            // fetch service provicer id from SP table throught login id 
                             
-                            // $login_id = $_SESSION['sp_login_id'];
-                            // $fetchspid = "SELECT * FROM `sp` WHERE login_id = $login_id ";
-                            // $fetchresult = mysqli_query($conn, $fetchspid);
-                            // $numexist = mysqli_num_rows($fetchresult);
-                            // if ($numexist > 0 && $numexist < 2) {
-                            //     $row = mysqli_fetch_assoc($fetchresult);
-                            //     $sp_id =  $row['sp_id'];
-                            // }
                             $sp_id = $_SESSION['sp_id'];
                             $sql = "SELECT * FROM `sp_service` WHERE sp_id = $sp_id";
                             $result = mysqli_query($conn, $sql);
