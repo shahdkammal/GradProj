@@ -31,7 +31,7 @@
 
 <body class="login-body">
 
-    <!--Login Wrapper-->
+    <!--Wrapper-->
 
 
     <div class="container-fluid login-wrapper">
