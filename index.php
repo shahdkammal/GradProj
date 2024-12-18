@@ -8,6 +8,16 @@ $css_directory2 = 'css/main.min.css.map';
 include 'includes/header.php';
 include 'includes/navbar.php';
 
+
+if (isset($_SESSION['status'])) {
+    echo "<div style='text-align: center; margin-top: 20px; color: green;'>" . $_SESSION['status'] . "</div>";
+    unset($_SESSION['status']);
+} elseif (isset($_SESSION['statusfail'])) {
+    echo "<div style='text-align: center; margin-top: 20px; color: red;'>" . $_SESSION['statusfail'] . "</div>";
+    unset($_SESSION['statusfail']);
+}
+
+
 ?>
 
 <style>

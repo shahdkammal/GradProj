@@ -150,7 +150,7 @@ if (!isset($_SESSION['sp_loggedin']) || $_SESSION['sp_loggedin'] != true) {
                                 echo $_SESSION['sp_username'];
                                 ?>
                             </strong></p>
-                        <span class="text-primary small"><strong>Serivce Provider</strong></span>
+                        <span class="text-primary small"><strong>Service Provider</strong></span>
                     </div>
                     <!--Image Avatar-->
 

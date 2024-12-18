@@ -8,8 +8,8 @@ include 'assets/include/sp_header.php';
 <div class="col-sm-9 col-xs-12 content pt-3 pl-0">
     <div class="row ">
         <div class="col-lg-5">
-            <h5 class="mb-0"><strong>View service Gig</strong></h5>
-            <span class="text-secondary">Workspace<i class="fa fa-angle-right"></i> View service Gig</span>
+            <h5 class="mb-0"><strong>View service details</strong></h5>
+            <span class="text-secondary">Workspace<i class="fa fa-angle-right"></i> View service details</span>
         </div>
         <div class="col-md-auto col-lg-7">
             <!-- error area -->

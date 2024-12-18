@@ -81,21 +81,10 @@ if (!defined('MYSITE')) {
 
                     ?>
                     <div class="dropdown-divider"></div>
-                    <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                    
                 </div>
             </li>
-            <!-- More -->
-            <!-- <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    More
-                </a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Admin</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li> -->
+           
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <a href="sp_signup.php" target="_blank"><button type="button" class="btn btn-outline-light mr-2">Register As a Service Provider</button></a>

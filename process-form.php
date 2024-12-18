@@ -40,6 +40,8 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 
 mysqli_stmt_bind_param($stmt, "ssii", $name, $message, $priority, $type);
 
+
+
 if (mysqli_stmt_execute($stmt)) {
     $_SESSION['status'] = "Record Saved.";
     header("location: index.php");

@@ -177,7 +177,7 @@ include 'assets/include/sp_header.php';
                                 <!-- <p><strong>Sub - Total amount: $14,768.00</strong></p>
                                 <p><strong>Shipping: $1000.00</strong></p>
                                 <p><span>vat(10%): $150.00</span></p> -->
-                                <h2 class="mt-2"><strong>Total: &#8377; <?php echo $total ?>/-</strong></h2>
+                                <h2 class="mt-2"><strong>Total:  <?php echo $total ?></strong></h2>
                             </div>
                         </div>
                     </div>
