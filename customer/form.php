@@ -148,10 +148,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="feedback__container container">
             <article class="feedback__card">
                 <div class="feedback__data">
-                    <span>Noha Ahmed</span>
+                    <span>نهى احمد</span>
                     <h2 class="feedback__title">Stairs & Columns</h2>
                     <h4 class="feedback__date">7/7/2024</h4>
-                    <p>Best service ever.</p>
+                    <p>احسن خدمة واحسن فريق شكرا جدا ليكم</p>
                 </div>
             </article>
             <article class="feedback__card">
@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span>Khalid Kamal</span>
                     <h2 class="feedback__title">Cleaning and Home Organizing</h2>
                     <h4 class="feedback__date">14/7/2024</h4>
-                    <p>Loyal and organized person. Special thanks to Efreshli team.</p>
+                    <p>الناس محترمة وعندها امانة عالية برشحها ليكم جدا</p>
                 </div>
             </article>
             <article class="feedback__card">
@@ -168,7 +168,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span>Farida Ibrahim</span>
                     <h2 class="feedback__title">Home Reset</h2>
                     <h4 class="feedback__date">1/8/2024</h4>
-                    <p>Efficient work.</p>
+                    <p>Highly Recommend HS service team ! Efficient work.</p>
                 </div>
             </article>
         </div>
