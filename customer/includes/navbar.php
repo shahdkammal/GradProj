@@ -102,6 +102,7 @@ if (!defined('MYSITE')) {
             </li> -->
         </ul>
         <form class="form-inline my-2 my-lg-0">
+        <a href="form.php" target=""><button type="button" class="btn btn-outline-light mr-2">Send Feedback</button></a>
             <a href="../sp_signup.php" target=""><button type="button" class="btn btn-outline-light mr-2">Register As a Service Provider</button></a>
             
             <div class="btn-group mr-3">

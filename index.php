@@ -30,23 +30,13 @@ if (isset($_SESSION['status'])) {
 </style>
 
 <body style="">
-
-
-
-
-
     <!-- ===landing page image Start=== -->
     <img src="img/purpule.png" class="img-fluid mb-5" alt="Landing Page image">
     <!-- ===landing page image End=== -->
 
-
-
     <!-- ===main area page Start=== -->
-
     <div class="container">
         <div class="row row-cols-3">
-
-
             <?php // category view code. Data get from category table
             $sql = "SELECT * FROM `category`";
             $result = mysqli_query($conn, $sql);
@@ -83,22 +73,7 @@ if (isset($_SESSION['status'])) {
     </div>
     <!-- ===main area page End=== -->
 
-
-
-
     <?php
     include 'includes/footer.php';
     include 'includes/navfooter.php';
     ?>
-
-
-
-    <!-- <div class="col mb-4">
-        <div class="col">
-            <div class="card card-deck">
-                <div class="card-body text-center">
-                    <h5 class="card-title ">Card title</h5>
-                </div>
-            </div>
-        </div>
-    </div> -->
