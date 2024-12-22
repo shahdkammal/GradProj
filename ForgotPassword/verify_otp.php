@@ -20,10 +20,12 @@ if (isset($_POST['verify'])) {
         $update_result = mysqli_query($conn, $update_query);
 
         if ($update_result) {
-            echo '<div class="container">
-                    <div class="alert alert-success" role="alert">Password reset successfully!</div>
-                    <a href="../login.php" class="btn btn-primary back-btn">Back to Login</a>
-                  </div>';
+            echo "<div style='display: flex; justify-content: center; align-items: center; height: 100vh;'>
+                        <div style='text-align: center; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9; width: 50%;'>
+                            <p style='color: green; font-weight: bold;'>Password changed successfully!</p>
+                            <a href='../login.php' style='display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;'>Return to login</a>
+                        </div>
+                      </div>";
         } else {
             echo '<div class="alert alert-danger" role="alert">Failed to reset password. Please try again.</div>';
         }
