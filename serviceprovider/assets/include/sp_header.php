@@ -91,7 +91,7 @@ if (!isset($_SESSION['sp_loggedin']) || $_SESSION['sp_loggedin'] != true) {
             <div class="col-sm-3 pl-0 text-center header-logo">
                 <div class="bg-theme mr-3 pt-3 pb-2 mb-0" style="">
                     <h3 class="logo"><a href="index.php" class="text-secondary logo"><i class="fa fa-institution"></i>
-                            <span class="small"> <b>HS </b> workspace</span></a></h3>
+                            <span class="small"> <b>HS </b> Dashboard</span></a></h3>
                 </div>
             </div>
             <!--Logo-->

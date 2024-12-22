@@ -37,7 +37,7 @@ if (!defined('MYSITE')) {
                 <div class="col-md-3 mb-md-0 mb-3">
 
                     <!-- Links -->
-                    <h5 class="text-uppercase text-light">Links</h5>
+                   
 
                     <ul class="list-unstyled">
 
@@ -62,7 +62,7 @@ if (!defined('MYSITE')) {
                 <div class="col-md-3 mb-md-0 mb-3">
 
                     <!-- Links -->
-                    <h5 class="text-uppercase text-light">Links</h5>
+                   
 
                     <ul class="list-unstyled">
                         <li>
